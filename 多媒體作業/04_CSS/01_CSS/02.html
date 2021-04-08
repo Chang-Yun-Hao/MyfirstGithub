@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    caption{
+        text-align: left;
+        margin: 0px 0px 15px 10px;
+        color: rgb(33, 53, 16);
+    }
+    table,td,th {
+        border-collapse: collapse;
+        border: 1px solid rgb(28, 118, 121);
+        padding: 20px;
+    }
+    h3,th {
+        color: hsl(53, 14%, 25%);
+    }
+    th{
+        background-color: #5a787a;
+        color: white;
+    }
+    td{
+        background-color: rgb(198, 218, 240);
+    }
+    select{
+        width: 150px;
+    }
+    .a{
+        width: 138px;
+    }
+
+    .b{
+        position: absolute;
+        left: 330px;
+        
+    }
+
+    input{
+        width: 130px;
+        border:0;
+        background-color:#3b6dbe;
+        color:#fff;
+        border-radius:5px; /*邊角*/
+        cursor:pointer; /*滑鼠形狀*/
+    }
+    input:hover{
+        color:#003C9D;
+        background-color:#fff;
+        border:2px #003C9D solid;
+    }
+    </style>
+</head>
+<body> 
+    <table>
+    <caption><i><b>旅平險保費試算<b><i></caption>
+        <tr>
+            <th>旅遊地點</th>
+            <td>
+                <select>
+                    <option>請選擇</option>
+                    <option>國內</option>
+                    <option>中國大陸(直航)</option>
+                    <option>中國大陸</option>
+                    <option>東南亞</option>
+                    <option>其他</option>
+                    <option>日本</option>
+                    <option>美加</option>
+                    <option>歐洲</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>保險期間</th>
+            <td>
+                開始&nbsp
+                <input type="date" name="data" value="2015-10-02">   
+                <input type="time" value="02:00">  
+                &nbsp&nbsp&nbsp結束&nbsp       
+                <input type="date" value="2015-10-07">
+                <b>02:00</b>
+                共&nbsp5&nbsp天
+            </td>
+        </tr>
+        <tr>
+            <th>生日</th>
+            <td>
+                西元&nbsp                 
+                <select class="a">
+                    <option>1995</option>
+                </select>
+                &nbsp年&nbsp&nbsp
+                <select class="a">
+                <option>01</option>
+                </select>
+                &nbsp月&nbsp&nbsp
+
+                <select class="a">
+                <option>01</option>
+                </select>
+                &nbsp日
+                <b>&nbsp0&nbsp歲</b>
+            </td>
+        </tr>
+    </table>
+    <div class="b"><input type="button" value="開始試算"></div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單元件</title>
+</head>
+<body>
+    <!--表單內容送到Email-->
+    <form method="post" action="mailto:abc@mail.com.tw?subject=xxxx" enctype="text/plain">
+        <!--輸入文字元件-->
+        <input type="text" name="username" value="預設值" size="10" maxlength="10" autofocus />
+        <textarea name="memo" cols="20" rows="2" wrap="hard/Soft">方塊裡的內容 </textarea>
+        
+        <!--核取元件-->
+        <input type="radio" name="gender" value="女值" checked />女生
+        <input type="checkbox" name="interest" value="看電影" checked/>看電影
+
+        <!--多選清單-->
+        <select size="1" name="清單名稱" multiple> <!--按著Ctrl多選-->
+            <option>游泳</option>
+            <option>跑步</option>
+            <option>騎自行車</option>
+            <option>打籃球</option>
+        </select>
+            
+        <!--密碼、信箱、網址、查詢、電話-->
+        <input type="password" name="pw" size="20" />
+        <input type="email" />
+        <input type="url" />
+        <input type=“search”>
+        <input type=“tel”>
+
+        <!--日期時間-->
+        <input type="date" name="日期"/>
+        <input type="time" name="日期"/>
+        <input type="datetime" name="日期"/>
+        <input type="month" name="日期"/>
+        <input type="week" name="日期"/>
+        <input type="datetime-local" name="日期"/>
+
+        <!--數字、顏色、範圍-->
+        <input type="number" name="數字欄位" value="5" min="3" max="20" />
+        <input type="color" name="顏色欄位" value="#ff00ff" />
+        <input type="range" name="範圍欄位" value="5" min="3" max="20" />
+
+        <!--協助查詢-->
+        <input list="index" name="browser" required> <!--required為必填-->
+        <datalist id="index">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <input type="submit">
+
+        <!--點到字就會選取-->
+        <!--方法1-->
+        <label for="male">Male</label>
+        <input type="radio" name="sex" id="male" value="male">  <!-- for=id -->
+        <!--方法2-->
+        <label>Female<input type="radio" name="sex" value="female"></label>  <!-- 單行寫法 -->
+
+        <!--分組表單-->
+        <fieldset>
+            <legend>分組標題</legend>
+            分組內容
+       </fieldset>
+       
+       <!--清單分群命名-->
+       <select size="1" name="清單名稱">
+            <optgroup label="室外">
+                <option>跑步</option>
+                <option>騎自行車</option>
+            <optgroup label="室內">
+                <option>打籃球</option>
+                <option>游泳</option>
+        </select>
+
+        <!--送出、重填、回上頁-->
+        <input type="submit" value="送出" />
+        <input type="reset" value="重填" />
+        <input type="button" value="回上頁" onclick="javascript:history.back();" />
+        
+        <!--結束-->
+    </form>
+</body>
+</html>
